@@ -3,8 +3,11 @@ let nav = document.querySelector('.nav');
 let mainPage = document.querySelector('.page-header');
 let header = document.querySelector('.menu__upper-row');
 
+header.classList.remove('no-js');
+mainPage.classList.remove('no-js');
+nav.classList.remove('no-js');
+
 iconBurger.addEventListener('click', function () {
-  console.log("Yf cbvdjk yf;fkb")
   header.classList.toggle('active');
   nav.classList.toggle('active');
   mainPage.classList.toggle('active');
