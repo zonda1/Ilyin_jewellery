@@ -1,0 +1,46 @@
+.blog {
+  padding: 0 30px 0;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 15px 0;
+  }
+
+  &__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 0 120px 0;
+
+    @media (max-width: $tablet-max-width) {
+      max-width: 678px;
+      padding: 0 0 70px 0;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding: 0 0 60px 0;
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    & h2 {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      @include font-parametrs(600, 34px, 44px);
+      letter-spacing: 0.03em;
+      margin: 0 0 18px 0;
+    }
+
+    & p {
+      display: inline-block;
+      border-bottom: 1px solid $brown;
+      padding: 0 0 5px 0;
+      margin: 0 0 60px 0;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      & p {
+        margin: 0 0 50px 0;
+      }
+    }
+  }
+}

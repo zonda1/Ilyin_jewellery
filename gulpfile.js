@@ -151,6 +151,8 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+
+  gulp.watch("source/css/swiper-bundle.css").on("change", sync.reload);
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
@@ -160,7 +162,7 @@ exports.default = gulp.series(
 
 
 gulp.task('libs', function () {
-  return gulp.src(['node_modules/imask/dist/imask.js'])
+  return gulp.src(['node_modules/swiper/swiper-bundle.js'])
     .pipe(gulp.dest('source/js'))
 });
 
@@ -182,7 +184,7 @@ const build = gulp.series(
     styles,
     sprite,
     // createWebp,
-    // 'libs',
+    'libs',
   ),
 );
 
@@ -198,7 +200,7 @@ exports.default = gulp.series(
     styles,
     sprite,
     // createWebp,
-    // 'libs',
+    'libs',
   ),
   gulp.series(
     server,

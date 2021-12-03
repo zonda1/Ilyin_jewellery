@@ -1,0 +1,173 @@
+.questions {
+
+  &__wrapper {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 0 108px 0;
+
+    @media (max-width: $tablet-max-width) {
+      max-width: 678px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding: 0 15px 70px;
+    }
+
+    & h2 {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      @include font-parametrs(600, 34px, 44px);
+      letter-spacing: 0.03em;
+      text-align: center;
+      margin: 0 0 50px 0;
+
+      @media (max-width: $mobile-max-width) {
+        margin: 0 0 28px 0;
+      }
+    }
+  }
+
+  &__container {
+    border: 1px solid $brown;
+  }
+
+  &__question {
+    border-bottom: 1px solid $brown;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.active p {
+      display: block;
+    }
+
+    &.active a {
+      padding: 42px 47px 0 43px;
+
+      @media (max-width: $tablet-max-width) {
+        padding: 42px 47px 0 49px;
+      }
+
+      @media (max-width: $mobile-max-width) {
+
+        @include font-parametrs(500, 16px, 22px);
+        padding: 16px 20px 0 23px;
+
+        & span {
+          max-width: 182px;
+        }
+      }
+    }
+
+    &.active svg {
+      transform: rotate(180deg);
+    }
+
+    & p {
+      display: none;
+      margin: 8px 0 42px 48px;
+      max-width: 533px;
+
+      @media (max-width: $tablet-max-width) {
+        margin: 25px 0 45px 48px;
+      }
+
+      @media (max-width: $mobile-max-width) {
+        // max-width: 204px;
+        @include font-parametrs(500, 14px, 20px);
+        margin: 14px 55px 19px 24px;
+
+      }
+    }
+  }
+
+  &__return {
+    & a {
+      & br {
+        display: none;
+      }
+    }
+  }
+}
+
+.tumbler {
+  & a {
+    @include font-parametrs(500, 18px, 23px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 42px 47px 45px 43px;
+  }
+
+  & svg {
+    stroke: $brown;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    & a {
+      padding: 42px 48px 45px 48px;
+    }
+
+    & svg {
+      width: 27px;
+      height: 16px;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    & a {
+      @include font-parametrs(500, 16px, 22px);
+      padding: 18px 21px 19px 24px;
+      align-items: flex-start;
+
+      // & span {
+      //   max-width: 200px;
+      // }
+    }
+
+    & svg {
+      margin: 5px 0 0 0;
+      width: 24px;
+      height: 13px;
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .questions__delivery {
+    & .tumbler {
+      & span {
+        max-width: 145px;
+      }
+    }
+  }
+
+  .questions__payment {
+    & .tumbler {
+      & span {
+        max-width: 165px;
+      }
+    }
+  }
+
+  .questions__return {
+    & .tumbler {
+      // & a {
+      //   width: 206px;
+      //   display: block;
+      // }
+
+      & span {
+        & br {
+          display: block;
+        }
+      }
+
+      // & svg {
+      //   position: absolute;
+      //   right: 0;
+      // }
+    }
+  }
+}

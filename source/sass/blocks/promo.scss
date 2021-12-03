@@ -1,0 +1,50 @@
+.promo {
+  background: $brown url("../img/content/main-page/promo-pic_dkpt.png") 50% 0/100% 100% no-repeat;
+
+  @media (max-width: $tablet-max-width) {
+    background: $brown url("../img/content/main-page/promo-pic_tab.png") 50% 0/100% 100% no-repeat;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    background: $brown url("../img/content/main-page/promo-pic_mob.png") 50% 0/100% 100% no-repeat;
+  }
+
+  &__wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 180px 0 180px 0;
+    text-align: center;
+
+    @media (max-width: $tablet-max-width) {
+      padding: 180px 17px 182px 0;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding: 188px 0 188px 0;
+    }
+  }
+
+  & h2 {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    @include font-parametrs(600, 45px, 58px);
+    color: $white;
+    letter-spacing: 0.03em;
+    margin: 0 0 -6px 0;
+
+    @media (max-width: $mobile-max-width) {
+      @include font-parametrs(600, 38px, 49px);
+    }
+  }
+
+  & p {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    @include font-parametrs(400, 38px, 49px);
+    font-style: italic;
+    color: $white;
+    margin: 0 0 0 0;
+
+    @media (max-width: $mobile-max-width) {
+      @include font-parametrs(400, 34px, 44px);
+    }
+  }
+}

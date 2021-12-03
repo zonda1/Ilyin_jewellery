@@ -23,11 +23,12 @@
     }
 
     @media (max-width: $tablet-max-width) {
+      padding: 41px 98px 45px;
       border-bottom: none;
     }
 
     @media (max-width: $mobile-max-width) {
-
+      padding: 41px 98px 11px;
 
       &>a {
         top: 20px;
