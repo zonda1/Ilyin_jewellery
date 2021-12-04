@@ -71,7 +71,7 @@ const createWebp = () => {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("source/img"))
 }
 
 exports.createWebp = createWebp;
@@ -183,7 +183,7 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     sprite,
-    // createWebp,
+    createWebp,
     'libs',
   ),
 );
@@ -199,7 +199,7 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     sprite,
-    // createWebp,
+    createWebp,
     'libs',
   ),
   gulp.series(

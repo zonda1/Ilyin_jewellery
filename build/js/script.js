@@ -5,6 +5,7 @@ let nav = document.querySelector('.nav');
 let mainPage = document.querySelector('.page-header');
 let header = document.querySelector('.menu__upper-row');
 let tumbler = document.querySelectorAll('.tumbler');
+let mainContent = document.querySelector('.page');
 // let links = document.querySelectorAll('.questions__question');
 
 header.classList.remove('no-js');
@@ -15,6 +16,8 @@ iconBurger.addEventListener('click', function () {
   header.classList.toggle('active');
   nav.classList.toggle('active');
   mainPage.classList.toggle('active');
+  // mainPage.classList.toggle('menu-open');
+  mainContent.classList.toggle('menu-open');
 });
 
 

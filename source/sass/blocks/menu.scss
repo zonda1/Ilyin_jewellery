@@ -75,7 +75,7 @@
     .menu__search {
 
       display: block;
-      width: 678px;
+      width: 100%;
       background-color: rgba(255, 255, 255, 0.15);
       border-radius: 21px;
 
@@ -118,9 +118,9 @@
 
 @media (max-width: $mobile-max-width) {
 
+
   .menu__upper-row.active,
   .menu__upper-row.no-js {
-    position: relative;
     padding: 102px 15px 16px;
   }
 }
