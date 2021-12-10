@@ -3,14 +3,14 @@
   background-color: $black;
 
   &__wrapper {
-    padding: 100px 98px 95px 98px;
+    padding: 88px 98px 77px 98px;
 
     @media (max-width: $tablet-max-width) {
-      padding: 47px 150px 60px 45px;
+      padding: 47px 150px 35px 45px;
     }
 
     @media (max-width: $mobile-max-width) {
-      padding: 47px 15px 60px 15px;
+      padding: 49px 15px 55px 15px;
     }
   }
 }

@@ -15,6 +15,10 @@
 
       & li {
         margin: 0 35px 0 0;
+
+        & a {
+          color: $dark;
+        }
       }
 
       & li:last-child {
@@ -23,7 +27,6 @@
 
       @media (max-width: $tablet-max-width) {
         flex-direction: column;
-
       }
     }
   }

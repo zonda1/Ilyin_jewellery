@@ -22,6 +22,7 @@
 
   &__title {
     text-align: center;
+    padding: 0 0 66px 0;
 
     & h2 {
       font-family: "Cormorant Garamond", "Times New Roman", serif;
@@ -30,17 +31,19 @@
       margin: 0 0 18px 0;
     }
 
-    & p {
-      display: inline-block;
+    & a {
+      // display: inline-block;
       border-bottom: 1px solid $brown;
+      color: $dark;
       padding: 0 0 5px 0;
-      margin: 0 0 60px 0;
+      // margin: 0 0 60px 0;
     }
 
     @media (max-width: $mobile-max-width) {
-      & p {
-        margin: 0 0 50px 0;
-      }
+      padding: 0 0 56px 0;
+      // & p {
+      //   margin: 0 0 50px 0;
+      // }
     }
   }
 }

@@ -1,0 +1,63 @@
+.controls {
+  margin: 27px 0 0 0;
+  // position: relative;
+  display: none;
+
+  &__scale {
+    position: relative;
+    height: 1px;
+    background-color: #F0EAE4;
+    margin: 0 0 17px 0;
+
+    & label {
+      @include font-parametrs(500, 14px, 18px);
+      position: absolute;
+      top: 14px;
+      // margin: 0 0 0 50px;
+    }
+
+    & label:nth-child(1n) {
+      width: 40px;
+      left: 18%;
+    }
+
+    & label:last-child {
+      width: 40px;
+      left: 70%;
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 45%;
+    height: 1px;
+    background-color: $brown;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: -7.5px;
+
+    width: 15px;
+    height: 15px;
+    padding: 0;
+
+
+    background-color: $brown;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    &--left {
+      left: 22%;
+    }
+
+    &--right {
+      left: 75%;
+    }
+  }
+
+
+}

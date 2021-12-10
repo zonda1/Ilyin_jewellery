@@ -18,6 +18,15 @@
 
   &__title {
     text-align: center;
+    padding: 0 0 60px 0;
+
+    @media (max-width: $tablet-max-width) {
+      padding: 0 0 54px 0;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding: 0 0 45px 0;
+    }
 
     & h2 {
       font-family: "Cormorant Garamond", "Times New Roman", serif;
@@ -29,18 +38,19 @@
       }
     }
 
-    & p {
-      display: inline-block;
+    & a {
+      // display: inline-block;
       border-bottom: 1px solid $brown;
-      margin: 0 0 60px 0;
+      color: $dark;
+      // margin: 0 0 60px 0;
 
-      @media (max-width: $tablet-max-width) {
-        margin: 0 0 54px 0;
-      }
+      // @media (max-width: $tablet-max-width) {
+      //   margin: 0 0 54px 0;
+      // }
 
-      @media (max-width: $mobile-max-width) {
-        margin: 0 0 45px 0;
-      }
+      // @media (max-width: $mobile-max-width) {
+      //   margin: 0 0 45px 0;
+      // }
     }
   }
 }

@@ -1,0 +1,129 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+
+  &>a {
+    display: none;
+  }
+
+  &__wrapper {
+    border: 1px solid $brown;
+    margin: 0 0 36px 0;
+  }
+
+
+
+  &__filter {
+    padding: 23px 23px 14px 25px;
+
+    & ul {
+      @include list-reset();
+      display: none;
+
+      & li {
+
+        margin: 0 0 10px 0;
+      }
+
+      & label {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        @include font-parametrs(500, 14px, 18px);
+        padding: 0 0 0 35px;
+      }
+
+      & input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
+
+      & input:checked {
+        opacity: 0;
+      }
+
+      & input+label::before {
+        position: absolute;
+        content: "";
+        top: 1px;
+        left: 9px;
+        width: 15px;
+        height: 15px;
+        border: 1px solid $brown;
+      }
+
+      & input:focus+label::before {
+        border: 1px solid red;
+      }
+
+      & input:checked+label::after {
+        position: absolute;
+        content: "";
+        top: 1px;
+        left: 9px;
+        width: 15px;
+        height: 15px;
+        background-color: $brown;
+      }
+
+      // & input:focus+label::after {
+      //   border: 1px solid red;
+      // }
+
+    }
+
+    &.active {
+      & ul {
+        display: block;
+        margin: 21px 0 0 0;
+      }
+
+      & .controls {
+        display: block;
+      }
+
+      & .filter__tumbler {
+        & svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__tumbler {
+    & a {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+
+      & svg {
+        stroke: $brown;
+        margin: 5px 0 0 0;
+      }
+    }
+
+  }
+
+  &__product {
+    border-bottom: 1px solid $brown;
+  }
+
+  &__material {
+    border-bottom: 1px solid $brown;
+    padding: 23px 23px 22px 25px;
+  }
+
+  &__collection {
+    border-bottom: 1px solid $brown;
+    padding: 23px 23px 22px 25px;
+  }
+
+  &__price {
+    padding: 23px 23px 31px 25px;
+  }
+}
+
+.active {}
+
+.tumbler {}

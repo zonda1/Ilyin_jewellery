@@ -67,9 +67,10 @@
     & p {
       display: none;
       margin: 8px 0 42px 48px;
-      max-width: 534px;
+      max-width: 527px;
 
       @media (max-width: $tablet-max-width) {
+        max-width: 534px;
         margin: 25px 0 45px 48px;
       }
 

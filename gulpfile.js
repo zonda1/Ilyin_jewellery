@@ -24,16 +24,16 @@ const concat = require('gulp-concat');
 
 const styles = () => {
   return gulp.src("source/sass/style.scss")
-    // .pipe(plumber())
+    .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename("style.css"))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -71,7 +71,7 @@ const createWebp = () => {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.createWebp = createWebp;
@@ -84,6 +84,7 @@ const copy = (done) => {
       "source/fonts/*.{woff2,woff}",
       "source/img/**/*.svg",
       "source/js/*.js",
+      "source/css/swiper-bundle.css",
       "source/*.html"
     ], {
       base: "source"
@@ -107,7 +108,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -135,7 +136,7 @@ const sprite = () => {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img/icons/sprite-icons"));
+    .pipe(gulp.dest("build/img/icons/sprite-icons"));
 }
 
 exports.sprite = sprite;
@@ -166,20 +167,12 @@ gulp.task('libs', function () {
     .pipe(gulp.dest('source/js'))
 });
 
-// gulp.task('js', function () {
-//   return gulp.src('source/js/**/*.js')
-
-//     .pipe(concat('main.js'))
-//     .pipe(gulp.dest('build/js'))
-// });
-
-
 // Build
 
 const build = gulp.series(
   clean,
   copy,
-  // optimizeImages,
+  optimizeImages,
   gulp.parallel(
     styles,
     sprite,
