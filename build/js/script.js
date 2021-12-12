@@ -14,6 +14,7 @@ let loginClose = document.querySelector('.popup__form > a');
 let popup = document.querySelector('.popup');
 let loginLink = mainPage.querySelectorAll('.login-link');
 
+
 header.classList.remove('no-js');
 mainPage.classList.remove('no-js');
 nav.classList.remove('no-js');
@@ -75,7 +76,7 @@ window.onload = function () {
 for (let i = 0; i < loginLink.length; i++) {
   loginLink[i].addEventListener('click', function (evt) {
     evt.preventDefault();
-    popup.classList.add('active')
+    popup.classList.add('active');
     mainContent.classList.toggle('popup-open');
   });
 }

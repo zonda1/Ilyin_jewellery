@@ -11,10 +11,6 @@
   }
 }
 
-.swiper-wrapper {
-  // padding: 50px;
-}
-
 .swiper-slide {
   display: flex;
   flex-direction: column;
@@ -35,18 +31,24 @@
   }
 
   & img {
+    width: 100%;
+
     @media (max-width: $tablet-max-width) {
       width: 324px;
       height: 340px;
     }
 
     @media (max-width: $mobile-max-width) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 320px) {
       width: 130px;
       height: 136px;
     }
   }
 }
-
 
 
 .swiper-button-prev,
@@ -58,8 +60,6 @@
   & svg {
     stroke: $brown;
   }
-
-
 }
 
 @media (max-width: $tablet-max-width) {
@@ -101,6 +101,4 @@
   .swiper-button-next {
     display: none;
   }
-
-
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  &>a {
+  & > a {
     display: none;
   }
 
@@ -10,7 +10,6 @@
     border: 1px solid $brown;
     margin: 0 0 36px 0;
   }
-
 
 
   &__filter {
@@ -29,8 +28,14 @@
         position: relative;
         display: inline-flex;
         align-items: center;
+
         @include font-parametrs(500, 14px, 18px);
         padding: 0 0 0 35px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
 
       & input {
@@ -43,7 +48,7 @@
         opacity: 0;
       }
 
-      & input+label::before {
+      & input + label::before {
         position: absolute;
         content: "";
         top: 1px;
@@ -53,11 +58,11 @@
         border: 1px solid $brown;
       }
 
-      & input:focus+label::before {
+      & input:focus + label::before {
         border: 1px solid red;
       }
 
-      & input:checked+label::after {
+      & input:checked + label::after {
         position: absolute;
         content: "";
         top: 1px;
@@ -67,10 +72,13 @@
         background-color: $brown;
       }
 
-      // & input:focus+label::after {
-      //   border: 1px solid red;
-      // }
+      & input:checked:hover + label::after {
+        box-shadow: 0 0 16px $brown;
+      }
 
+      & input:checked:focus + label::after {
+        box-shadow: 0 0 16px red;
+      }
     }
 
     &.active {
@@ -97,12 +105,15 @@
       justify-content: space-between;
       cursor: pointer;
 
+      &:hover {
+        opacity: 0.7;
+      }
+
       & svg {
         stroke: $brown;
         margin: 5px 0 0 0;
       }
     }
-
   }
 
   &__product {
@@ -123,7 +134,3 @@
     padding: 23px 23px 31px 25px;
   }
 }
-
-.active {}
-
-.tumbler {}

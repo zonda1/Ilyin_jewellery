@@ -24,6 +24,7 @@
 
   & h3 {
     font-family: "Cormorant Garamond", "Times New Roman", serif;
+
     @include font-parametrs(600, 26px, 34px);
     color: $black;
     margin: 0 0 37px 0;
@@ -32,6 +33,10 @@
   & a {
     color: $dark;
     border-bottom: 1px solid $brown;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__acticle {
@@ -45,22 +50,21 @@
 
   &__care {
     justify-content: flex-end;
-    background: url("../../img/content/main-page/jess-harper-sunday_dktp.png") no-repeat;
+    background: url("../img/content/main-page/jess-harper-sunday_dktp.png") no-repeat;
 
     @media (max-width: $tablet-max-width) {
-      background: url("../../img/content/main-page/jess-harper-sunday_tab.png") no-repeat;
+      background: url("../img/content/main-page/jess-harper-sunday_tab.png") no-repeat;
     }
 
     @media (max-width: $mobile-max-width) {
       justify-content: center;
-      background: url("../../img/content/main-page/jess-harper-sunday_mob.png") 0 0/100% auto no-repeat;
+      background: url("../img/content/main-page/jess-harper-sunday_mob.png") 0 0/100% auto no-repeat;
     }
   }
 
   &__descp {
     text-align: center;
     background: $cream;
-    // padding: 100px 0 0 0;
   }
 
   &__care-descp {
@@ -81,15 +85,15 @@
   }
 
   &__power {
-    background: url("../../img/content/main-page/alex-holyoake_dktp.png") top right no-repeat;
+    background: url("../img/content/main-page/alex-holyoake_dktp.png") top right no-repeat;
 
     @media (max-width: $tablet-max-width) {
-      background: url("../../img/content/main-page/alex-holyoake_tab.png") top right no-repeat;
+      background: url("../img/content/main-page/alex-holyoake_tab.png") top right no-repeat;
     }
 
     @media (max-width: $mobile-max-width) {
       justify-content: center;
-      background: url("../../img/content/main-page/alex-holyoake_mob.png") 0 0/100% auto no-repeat;
+      background: url("../img/content/main-page/alex-holyoake_mob.png") 0 0/100% auto no-repeat;
     }
   }
 
@@ -112,18 +116,18 @@
 
   &__trends {
     grid-area: 1/2/3/3;
-    background: url("../../img/content/main-page/alve-odonnell_dktp.png") 0 0/100% 100% no-repeat;
+    background: url("../img/content/main-page/alve-odonnell_dktp.png") 0 0/100% 100% no-repeat;
     justify-content: flex-end;
     align-items: flex-end;
 
     @media (max-width: $tablet-max-width) {
       grid-area: 3/1/4/2;
-      background: url("../../img/content/main-page/alve-odonnell_tab.png") left no-repeat;
+      background: url("../img/content/main-page/alve-odonnell_tab.png") left no-repeat;
     }
 
     @media (max-width: $mobile-max-width) {
       justify-content: center;
-      background: url("../../img/content/main-page/alve-odonnell_mob.png") 0 0/100% auto no-repeat;
+      background: url("../img/content/main-page/alve-odonnell_mob.png") 0 0/100% auto no-repeat;
     }
   }
 
@@ -138,6 +142,4 @@
       padding: 62px 76px 72px;
     }
   }
-
-
 }

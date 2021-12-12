@@ -13,33 +13,32 @@
     z-index: 2;
   }
 
-
-  &__wrapper {
-    // max-width: 430px;
-    // margin: 0 auto;
-  }
-
   &__form {
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 138px 45px 55px;
     background: $cream url("../img/content/popup_background_dktp.png") 50% 0 no-repeat;
-    box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
+    box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
 
     & h2 {
       font-family: "Cormorant Garamond", "Times New Roman", serif;
+
       @include font-parametrs(600, 34px, 44px);
       margin: 50px 0 33px 0;
       text-align: center;
     }
 
-    &>a:first-of-type {
+    & > a:first-of-type {
       position: absolute;
       top: 20px;
       right: 20px;
 
-      &+a {
+      &:hover {
+        opacity: 0.5;
+      }
+
+      & + a {
         position: absolute;
         top: 20px;
         left: 20px;
@@ -50,6 +49,10 @@
           background-color: $cream;
           border-radius: 50%;
         }
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -57,9 +60,14 @@
     & label {
       margin: 0 0 34px 0;
 
+      &:hover {
+        opacity: 0.7;
+      }
+
       & input {
         font-family: "Poppins", "Arial", sans-serif;
         font-style: normal;
+
         @include font-parametrs(500, 14px, 21px);
         width: 100%;
         padding: 0 0 8px 0;
@@ -78,6 +86,10 @@
       color: $grey;
       align-self: flex-end;
       margin: 0 0 45px 0;
+
+      &:hover {
+        color: $dark;
+      }
     }
 
     & p {
@@ -91,6 +103,10 @@
         @include font-parametrs(500, 14px, 21px);
         color: $dark;
         margin: 0 0 0 5px;
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -102,7 +118,6 @@
     width: 442px;
 
     &__form {
-
       background: $cream url("../img/content/popup_background_tab.png") 50% 0 no-repeat;
     }
   }
@@ -131,7 +146,6 @@
       }
 
       & a {
-
         margin: 0 0 35px 0;
       }
     }

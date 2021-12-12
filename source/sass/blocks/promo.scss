@@ -26,6 +26,7 @@
 
   & h2 {
     font-family: "Cormorant Garamond", "Times New Roman", serif;
+
     @include font-parametrs(600, 45px, 58px);
     color: $white;
     letter-spacing: 0.03em;
@@ -38,6 +39,7 @@
 
   & p {
     font-family: "Cormorant Garamond", "Times New Roman", serif;
+
     @include font-parametrs(400, 38px, 49px);
     font-style: italic;
     color: $white;

@@ -10,15 +10,10 @@
       width: 25px;
       height: 18px;
       cursor: pointer;
-      // padding: 18px;
 
       &:hover {
-        background-color: rgba($dark, 0.3);
+        opacity: 0.7;
       }
-
-      // &.no-js {
-      //   display: none;
-      // }
 
       span {
         position: absolute;
@@ -27,6 +22,7 @@
         width: 25px;
         height: 2px;
         background-color: $dark;
+
 
         &:first-child {
           top: 0;
@@ -48,6 +44,10 @@
   &__cart {
     display: none;
 
+    &:hover {
+      opacity: 0.7;
+    }
+
     @media (max-width: $tablet-max-width) {
       display: block;
       position: absolute;
@@ -67,7 +67,6 @@
 }
 
 @media (max-width: $tablet-max-width) {
-
   .menu__upper-row.active,
   .menu__upper-row.no-js {
     padding: 135px 45px 27px;
@@ -83,7 +82,6 @@
         display: flex;
         width: 100%;
         padding: 12px 0 14px 12px;
-
 
 
         & svg {
@@ -117,8 +115,6 @@
 }
 
 @media (max-width: $mobile-max-width) {
-
-
   .menu__upper-row.active,
   .menu__upper-row.no-js {
     padding: 102px 15px 16px;
