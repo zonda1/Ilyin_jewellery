@@ -25,11 +25,6 @@
     @media (max-width: $tablet-max-width) {
       padding: 41px 98px 45px;
       border-bottom: none;
-
-      // &.menu-open {
-
-      //   overflow: hidden;
-      // }
     }
 
     @media (max-width: $mobile-max-width) {
@@ -47,17 +42,27 @@
   }
 
   &__search {
-    & svg {
-      fill: $dark;
-      margin: 0 15px 0 0;
-    }
+    & label {
+      & input {
+        font-family: "Poppins", "Arial", sans-serif;
+        font-style: normal;
 
-    & a {
-      color: $grey;
-      font-size: 14px;
+        @include font-parametrs(500, 14px, 21px);
+        border: 0;
+      }
 
-      &:hover {
-        opacity: 0.7;
+      & svg {
+        fill: $dark;
+        margin: 0 10px 0 0;
+      }
+
+      & a {
+        color: $grey;
+        font-size: 14px;
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -67,12 +72,15 @@
   }
 
   &__login {
+    display: flex;
+
     & a {
       color: $dark;
       font-size: 14px;
+      margin: 0 35px 0 0;
 
-      &:first-child {
-        margin: 0 35px 0 0;
+      &:last-child {
+        margin: 0 0 0 0;
       }
 
       &:hover {
@@ -119,6 +127,10 @@
         & svg {
           fill: $white;
         }
+      }
+
+      & input {
+        display: none;
       }
     }
   }

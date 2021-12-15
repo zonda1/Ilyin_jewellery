@@ -21,14 +21,19 @@
     <header class="page-header no-js">
       <div class="page-header__wrapper menu">
         <div class="page-header__upper-row no-js menu__upper-row">
+
           <div class="page-header__search menu__search">
-            <a href="#">
-              <svg width="14" height="14">
-                <use xlink:href="img/icons/sprite-icons/sprite.svg#search_icon"></use>
-              </svg>
-              <span>Type here to search</span></a>
+            <label for="search">
+              <a href="#">
+                <svg width="14" height="14">
+                  <use xlink:href="img/icons/sprite-icons/sprite.svg#search_icon"></use>
+                </svg>
+              </a>
+              <input id="search" name="search" placeholder="Type here to search">
+            </label>
           </div>
-          <a href="index.html">
+
+          <a href="main.html">
             <svg width="66" height="66" viewbox="0 0 66 66">
               <use xlink:href="img/icons/sprite-icons/sprite.svg#logo"></use>
             </svg>
@@ -75,22 +80,27 @@
     <main class="page-main">
       <div class="page-main__wrapper">
         <h1 class="visually-hidden">Marketplace Jewellery</h1>
-        <div class="popup">
-          <div class="popup__wrapper">
-            <h2 class="visually-hidden">Popup</h2>
-            <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
-              <a href="#">
-                <img src="img/icons/popup-close_icon.svg" width="14" height="14" alt="Close link">>
-              </a>
-              <h2>Log In</h2>
-              <label for="mail"><input id="mail" name="mail" type="email" placeholder="Your E-mail"></label>
-              <label for="password"><input id="password" name="password" type="password" placeholder="Password"></label>
-              <a href="#">Forgot your password?</a>
-              <button type="submit" class="button button--popup">Log In</button>
-              <p>Don’t have an account?<a href="#">Sign up</a></p>
-            </form>
+
+        <div class="popup-container">
+          <div class="popup">
+            <div class="popup__wrapper">
+              <h2 class="visually-hidden">Popup</h2>
+              <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
+                <a href="#">
+                  <img src="img/icons/popup-close_icon.svg" width="14" height="14" alt="Close link">>
+                </a>
+                <h2>Log In</h2>
+                <label for="mail"><input id="mail" name="mail" type="email" placeholder="Your E-mail"></label>
+                <label for="password"><input id="password" name="password" type="password"
+                    placeholder="Password"></label>
+                <a href="#">Forgot your password?</a>
+                <button type="submit" class="button button--popup">Log In</button>
+                <p>Don’t have an account?<a href="#">Sign up</a></p>
+              </form>
+            </div>
           </div>
         </div>
+
         <section class="catalog-promo">
           <div class="catalog-promo__wrapper">
             <h2>ALL JEWELLERY</h2>
@@ -110,7 +120,7 @@
 
                   <div class="filter__filter filter__product active">
                     <div class="filter__tumbler">
-                      <a><span>Product</span>
+                      <a href="#"><span>Product</span>
                         <svg width="17" height="10" viewbox="0 0 17 10" fill="none">
                           <use xlink:href="img/icons/sprite-icons/sprite.svg#vector-down"></use>
                         </svg>
@@ -128,7 +138,7 @@
 
                   <div class="filter__filter filter__material">
                     <div class="filter__tumbler">
-                      <a><span>Material</span>
+                      <a href="#"><span>Material</span>
                         <svg width="17" height="10" viewbox="0 0 17 10" fill="none">
                           <use xlink:href="img/icons/sprite-icons/sprite.svg#vector-down"></use>
                         </svg>
@@ -142,7 +152,7 @@
 
                   <div class="filter__filter filter__collection">
                     <div class="filter__tumbler">
-                      <a><span>Collection</span>
+                      <a href="#"><span>Collection</span>
                         <svg width="17" height="10" viewbox="0 0 17 10" fill="none">
                           <use xlink:href="img/icons/sprite-icons/sprite.svg#vector-down"></use>
                         </svg>
@@ -156,7 +166,7 @@
 
                   <div class="filter__filter filter__price active">
                     <div class="filter__tumbler">
-                      <a><span>Price</span>
+                      <a href="#"><span>Price</span>
                         <svg width="17" height="10" viewbox="0 0 17 10" fill="none">
                           <use xlink:href="img/icons/sprite-icons/sprite.svg#vector-down"></use>
                         </svg>
@@ -199,8 +209,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-1_dktp.webp 1x, img/content/catalog-page/jew-1_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-1_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-1_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-1_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-1_dktp@2x.jpg 2x" alt="Double pearl earrings">
                           </picture>
                           <h3>Double pearl earrings</h3>
                           <p>$ 115</p>
@@ -221,7 +231,8 @@
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-2_dktp.webp 1x, img/content/catalog-page/jew-2_dktp@2x.webp 2x">
                             <img src="img/content/catalog-page/jew-2_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-2_dktp@2x.jpg 2x" alt="">
+                              srcset="img/content/catalog-page/jew-2_dktp@2x.jpg 2x" width="270" height="272"
+                              alt="Choker with gold bead">
                           </picture>
                           <h3>Choker with gold bead</h3>
                           <p>$ 55</p>
@@ -241,8 +252,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-3_dktp.webp 1x, img/content/catalog-page/jew-3_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-3_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-3_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-3_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-3_dktp@2x.jpg 2x" alt="Gold layered necklace">
                           </picture>
                           <h3>Gold layered necklace</h3>
                           <p>$ 155</p>
@@ -262,8 +273,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-4_dktp.webp 1x, img/content/catalog-page/jew-4_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-4_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-4_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-4_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-4_dktp@2x.jpg 2x" alt="Blue gemstone pendant">
                           </picture>
                           <h3>Blue gemstone pendant</h3>
                           <p>$ 105</p>
@@ -283,8 +294,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-5_dktp.webp 1x, img/content/catalog-page/jew-5_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-5_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-5_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-5_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-5_dktp@2x.jpg 2x" alt="Boho earrings">
                           </picture>
                           <h3>Boho earrings</h3>
                           <p>$ 75</p>
@@ -304,8 +315,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-6_dktp.webp 1x, img/content/catalog-page/jew-6_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-6_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-6_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-6_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-6_dktp@2x.jpg 2x" alt="Gold bird necklace">
                           </picture>
                           <h3>Gold bird necklace</h3>
                           <p>$ 135</p>
@@ -325,8 +336,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-7_dktp.webp 1x, img/content/catalog-page/jew-7_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-7_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-7_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-7_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-7_dktp@2x.jpg 2x" alt="Black leather choker">
                           </picture>
                           <h3>Black leather choker</h3>
                           <p>$ 85</p>
@@ -346,8 +357,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-8_dktp.webp 1x, img/content/catalog-page/jew-8_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-8_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-8_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-8_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-8_dktp@2x.jpg 2x" alt="Necklace with amethyst">
                           </picture>
                           <h3>Necklace with amethyst</h3>
                           <p>$ 145</p>
@@ -367,8 +378,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-9_dktp.webp 1x, img/content/catalog-page/jew-9_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-9_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-9_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-9_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-9_dktp@2x.jpg 2x" alt="Elephant earrings">
                           </picture>
                           <h3>Elephant earrings</h3>
                           <p>$ 95</p>
@@ -388,8 +399,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-10_dktp.webp 1x, img/content/catalog-page/jew-10_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-10_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-10_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-10_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-10_dktp@2x.jpg 2x" alt="Threader necklace">
                           </picture>
                           <h3>Threader necklace</h3>
                           <p>$ 115</p>
@@ -409,8 +420,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-11_dktp.webp 1x, img/content/catalog-page/jew-11_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-11_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-11_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-11_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-11_dktp@2x.jpg 2x" alt="Origami crane necklace">
                           </picture>
                           <h3>Origami crane necklace</h3>
                           <p>$ 105</p>
@@ -430,8 +441,8 @@
                             <!-- 1х: 270px*272px; 2x: 540px*544px -->
                             <source type="image/webp"
                               srcset="img/content/catalog-page/jew-12_dktp.webp 1x, img/content/catalog-page/jew-12_dktp@2x.webp 2x">
-                            <img src="img/content/catalog-page/jew-12_dktp.jpg"
-                              srcset="img/content/catalog-page/jew-12_dktp@2x.jpg 2x" alt="">
+                            <img src="img/content/catalog-page/jew-12_dktp.jpg" width="270" height="272"
+                              srcset="img/content/catalog-page/jew-12_dktp@2x.jpg 2x" alt="Marble earrings">
                           </picture>
                           <h3>Marble earrings</h3>
                           <p>$ 95</p>
@@ -465,12 +476,17 @@
           <h2>The good stuff in your inbox</h2>
           <p>News and updates from CH. No spam, we promise.</p>
 
-          <label for="email"><input type="text" id="email" name="email" placeholder="Your E-mail"><a href="#"><span>Sign
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <label for="email">
+              <input type="email" id="email" name="email" placeholder="Your E-mail" required>
+            </label>
+            <button type="submit"><span>Sign
                 Up</span>
               <svg width="30" height="11">
                 <use xlink:href="img/icons/sprite-icons/sprite.svg#arrow-right_icon"></use>
               </svg>
-            </a></label>
+            </button>
+          </form>
         </div>
         <div class="contacts__purchase">
           <ul>
@@ -508,7 +524,7 @@
 
     </footer>
   </div>
-  <script type="module" src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

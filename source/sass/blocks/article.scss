@@ -50,15 +50,15 @@
 
   &__care {
     justify-content: flex-end;
-    background: url("../img/content/main-page/jess-harper-sunday_dktp.png") no-repeat;
+    background: url("../img/content/main-page/jess-harper-sunday_dktp.png") 0 0/285px 100% no-repeat;
 
     @media (max-width: $tablet-max-width) {
-      background: url("../img/content/main-page/jess-harper-sunday_tab.png") no-repeat;
+      background: url("../img/content/main-page/jess-harper-sunday_tab.png") 0 0/339px 100% no-repeat;
     }
 
     @media (max-width: $mobile-max-width) {
       justify-content: center;
-      background: url("../img/content/main-page/jess-harper-sunday_mob.png") 0 0/100% auto no-repeat;
+      background: url("../img/content/main-page/jess-harper-sunday_mob.png") 0 0/100% 256px no-repeat;
     }
   }
 
@@ -85,15 +85,15 @@
   }
 
   &__power {
-    background: url("../img/content/main-page/alex-holyoake_dktp.png") top right no-repeat;
+    background: url("../img/content/main-page/alex-holyoake_dktp.png") 100% 0/285px 100% no-repeat;
 
     @media (max-width: $tablet-max-width) {
-      background: url("../img/content/main-page/alex-holyoake_tab.png") top right no-repeat;
+      background: url("../img/content/main-page/alex-holyoake_tab.png") 100% 0/339px 100% no-repeat;
     }
 
     @media (max-width: $mobile-max-width) {
       justify-content: center;
-      background: url("../img/content/main-page/alex-holyoake_mob.png") 0 0/100% auto no-repeat;
+      background: url("../img/content/main-page/alex-holyoake_mob.png") 0 0/100% 256px no-repeat;
     }
   }
 
@@ -122,12 +122,14 @@
 
     @media (max-width: $tablet-max-width) {
       grid-area: 3/1/4/2;
-      background: url("../img/content/main-page/alve-odonnell_tab.png") left no-repeat;
+      padding: 0 0 0 339px;
+      background: url("../img/content/main-page/alve-odonnell_tab.png") 0 0/339px 100% no-repeat;
     }
 
     @media (max-width: $mobile-max-width) {
       justify-content: center;
-      background: url("../img/content/main-page/alve-odonnell_mob.png") 0 0/100% auto no-repeat;
+      padding: 256px 0 0 0;
+      background: url("../img/content/main-page/alve-odonnell_mob.png") 0 0/100% 256px no-repeat;
     }
   }
 
@@ -135,7 +137,7 @@
     padding: 68px 74px 108px;
 
     @media (max-width: $tablet-max-width) {
-      padding: 86px 101px 93px;
+      padding: 86px 100px 93px;
     }
 
     @media (max-width: $mobile-max-width) {

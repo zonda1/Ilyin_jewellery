@@ -71,8 +71,7 @@
       grid-template-columns: 19.658% 34.188% repeat(2, 19.658%);
       grid-template-rows: repeat(2, min-content);
       row-gap: 34px;
-      column-gap: 27px;
-      overflow: hidden;
+      column-gap: 2.307%;
 
       & li {
         & picture {
@@ -81,12 +80,18 @@
 
           & img {
             width: 100%;
+            height: 100%;
           }
         }
       }
 
       & li:first-child + li {
         grid-area: 1/2/3/3;
+
+
+        & picture {
+          height: 100%;
+        }
       }
     }
   }

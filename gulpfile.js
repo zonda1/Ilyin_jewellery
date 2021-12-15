@@ -25,7 +25,7 @@ const concat = require('gulp-concat');
 
 const styles = () => {
   return gulp.src("source/sass/style.scss")
-    // .pipe(plumber())
+    .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
@@ -85,7 +85,6 @@ const copy = (done) => {
       "source/fonts/*.{woff2,woff}",
       "source/img/**/*.svg",
       "source/js/*.js",
-      "source/css/swiper-bundle.css",
       "source/*.html"
     ], {
       base: "source"
@@ -163,17 +162,17 @@ exports.default = gulp.series(
 );
 
 
-gulp.task('libs', function () {
-  return gulp.src(['node_modules/swiper/swiper-bundle.js'])
-    .pipe(gulp.dest('build/js'))
-});
+// gulp.task('libs', function () {
+//   return gulp.src(['node_modules/swiper/swiper-bundle.js'])
+//     .pipe(gulp.dest('build/js'))
+// });
 
 
 // Build
 
 const build = gulp.series(
   clean,
-  'libs',
+  // 'libs',
   copy,
   optimizeImages,
   gulp.parallel(
@@ -189,7 +188,7 @@ exports.build = build;
 
 exports.default = gulp.series(
   clean,
-  'libs',
+  // 'libs',
   copy,
   copyImages,
   gulp.parallel(

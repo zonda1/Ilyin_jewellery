@@ -6,6 +6,10 @@
   }
 
   @media (max-width: $mobile-max-width) {
+    background: $brown url("../img/content/main-page/promo-pic_mob.png") contain no-repeat;
+  }
+
+  @media (max-width: 450px) {
     background: $brown url("../img/content/main-page/promo-pic_mob.png") 50% 0/100% 100% no-repeat;
   }
 

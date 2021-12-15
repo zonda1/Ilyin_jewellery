@@ -1,0 +1,22 @@
+.main-links {
+
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  & a {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+
+    @include font-parametrs(600, 45px, 58px);
+
+    display: block;
+
+    color: $dark;
+    margin: 0 0 30px 0;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+}

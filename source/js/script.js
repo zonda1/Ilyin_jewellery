@@ -1,5 +1,3 @@
-import './swiper.js';
-
 let iconBurger = document.querySelector('.menu__burger');
 let nav = document.querySelector('.nav');
 let mainPage = document.querySelector('.page-header');
@@ -12,7 +10,9 @@ let filter = document.querySelector('.catalog__filter');
 let filterClose = document.querySelector('.filter > a');
 let loginClose = document.querySelector('.popup__form > a');
 let popup = document.querySelector('.popup');
+let popupContainer = document.querySelector('.popup-container');
 let loginLink = mainPage.querySelectorAll('.login-link');
+let loginMail = document.querySelector('input[name="mail"]');
 
 
 header.classList.remove('no-js');
@@ -59,7 +59,7 @@ window.onload = function () {
 
 
   } else {
-    alert('нет кнопки для отображения фильтров');
+    console.log('нет кнопки для отображения фильтров');
   };
 
   if (loginLink != null) {
@@ -77,6 +77,8 @@ for (let i = 0; i < loginLink.length; i++) {
   loginLink[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     popup.classList.add('active');
+    popupContainer.classList.add('active');
+    loginMail.focus();
     mainContent.classList.toggle('popup-open');
   });
 }
@@ -84,6 +86,7 @@ for (let i = 0; i < loginLink.length; i++) {
 let closeLogin = function () {
   if (popup.classList.contains('active')) {
     popup.classList.remove('active');
+    popupContainer.classList.remove('active');
     mainContent.classList.remove('popup-open');
   }
 }
@@ -100,7 +103,8 @@ window.addEventListener('keydown', function (evt) {
 // Tumbler
 
 tumbler.forEach((element) => {
-  element.addEventListener('click', () => {
+  element.addEventListener('click', (evt) => {
+    evt.preventDefault();
     let parent = element.parentNode;
     if (parent.classList.contains('active')) {
       parent.classList.remove('active');
@@ -114,7 +118,8 @@ tumbler.forEach((element) => {
 });
 
 tumblerFilter.forEach((element) => {
-  element.addEventListener('click', () => {
+  element.addEventListener('click', (evt) => {
+    evt.preventDefault();
     let parent = element.parentNode;
     parent.classList.toggle('active');
   })

@@ -10,7 +10,6 @@
 
 @import "blocks/page-header";
 @import "blocks/promo";
-@import "blocks/swiper";
 @import "blocks/gallery";
 @import "blocks/blog";
 @import "blocks/article";
@@ -27,3 +26,6 @@
 @import "blocks/form";
 @import "blocks/controls";
 @import "blocks/popup";
+@import "blocks/swiper-bundle.scss";
+@import "blocks/swiper";
+@import "blocks/main-links";

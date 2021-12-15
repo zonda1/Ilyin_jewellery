@@ -62,6 +62,7 @@
         height: 100vh;
         overflow-y: scroll;
         background-color: $white;
+        z-index: 2;
 
         & .filter {
           width: 420px;

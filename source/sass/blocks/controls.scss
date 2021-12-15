@@ -1,5 +1,6 @@
 .controls {
-  margin: 27px 0 0 0;
+  margin: 0 0 0 0;
+  padding: 0 25px 0;
   // position: relative;
   display: none;
 
@@ -7,7 +8,7 @@
     position: relative;
     height: 1px;
     background-color: #f0eae4;
-    margin: 0 0 17px 0;
+    margin: 0 0 48px 0;
 
     & label {
       @include font-parametrs(500, 14px, 18px);

@@ -1,9 +1,13 @@
 .page-footer {
   flex: 0 0 auto;
   background-color: $black;
+  // padding: 88px 98px 77px 98px;
 
   &__wrapper {
+
     padding: 88px 98px 77px 98px;
+    // max-width: 1170px;
+    // margin: 0 auto;
 
     @media (max-width: $tablet-max-width) {
       padding: 47px 150px 35px 45px;

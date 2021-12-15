@@ -13,7 +13,7 @@
 
 
   &__filter {
-    padding: 23px 23px 14px 25px;
+    // padding: 23px 23px 14px 25px;
 
     & ul {
       @include list-reset();
@@ -84,7 +84,7 @@
     &.active {
       & ul {
         display: block;
-        margin: 21px 0 0 0;
+        margin: 7px 0 25px 24px;
       }
 
       & .controls {
@@ -103,7 +103,8 @@
     & a {
       display: flex;
       justify-content: space-between;
-      cursor: pointer;
+      color: $dark;
+      padding: 23px 23px 14px 25px;
 
       &:hover {
         opacity: 0.7;
@@ -122,15 +123,29 @@
 
   &__material {
     border-bottom: 1px solid $brown;
-    padding: 23px 23px 22px 25px;
+
+    & .filter__tumbler {
+      & a {
+        padding: 23px 23px 22px 25px;
+      }
+    }
   }
 
   &__collection {
     border-bottom: 1px solid $brown;
-    padding: 23px 23px 22px 25px;
+
+    & .filter__tumbler {
+      & a {
+        padding: 23px 23px 22px 25px;
+      }
+    }
   }
 
   &__price {
-    padding: 23px 23px 31px 25px;
+    & .filter__tumbler {
+      & a {
+        padding: 23px 23px 26px 25px;
+      }
+    }
   }
 }
