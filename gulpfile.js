@@ -17,7 +17,6 @@ const stylelint = require("stylelint");
 const svgstore = require("gulp-svgstore");
 const cheerio = require("gulp-cheerio");
 const Imask = require("imask");
-
 const concat = require('gulp-concat');
 
 
@@ -162,17 +161,10 @@ exports.default = gulp.series(
 );
 
 
-// gulp.task('libs', function () {
-//   return gulp.src(['node_modules/swiper/swiper-bundle.js'])
-//     .pipe(gulp.dest('build/js'))
-// });
-
-
 // Build
 
 const build = gulp.series(
   clean,
-  // 'libs',
   copy,
   optimizeImages,
   gulp.parallel(
@@ -188,7 +180,6 @@ exports.build = build;
 
 exports.default = gulp.series(
   clean,
-  // 'libs',
   copy,
   copyImages,
   gulp.parallel(

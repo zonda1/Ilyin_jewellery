@@ -16,10 +16,6 @@
       & svg {
         fill: $brown;
       }
-
-      &:hover {
-        opacity: 0.7;
-      }
     }
 
     @media (max-width: $tablet-max-width) {
@@ -72,16 +68,16 @@
   }
 
   &__login {
+    flex: 0 1 42.735%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
 
     & a {
       color: $dark;
       font-size: 14px;
-      margin: 0 35px 0 0;
-
-      &:last-child {
-        margin: 0 0 0 0;
-      }
+      margin: 0 0 0 37px;
 
       &:hover {
         opacity: 0.7;
@@ -94,7 +90,7 @@
   }
 
   &__bottom-row {
-    padding: 20px 0;
+    padding: 20px 0 20px;
   }
 }
 

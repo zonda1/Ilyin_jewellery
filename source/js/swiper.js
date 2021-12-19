@@ -4,11 +4,11 @@ let sliderElement = document.querySelector('.swiper');
 let swiperSlider = {};
 let sliderType;
 if (window.innerWidth < 768) {
-  sliderType == 'mobile'
+  sliderType = 'mobile'
 } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
-  sliderType == 'tablet'
+  sliderType = 'tablet'
 } else {
-  sliderType == 'desktop'
+  sliderType = 'desktop'
 };
 
 

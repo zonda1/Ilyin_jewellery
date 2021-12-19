@@ -11,17 +11,8 @@
   }
 }
 
-// .swiper__wrapper {
-//   display: flex;
-//   justify-content: space-between;
-// }
-
 .swiper-slide {
-  margin: 0 0 30px 0;
-
-  // &:last-child {
-  //   margin: 0 0 30px 0;
-  // }
+  margin: 0 0 25px 0;
 
   & a {
     display: flex;
@@ -36,7 +27,7 @@
 
     & p {
       @include font-parametrs(600, 14px, 18px);
-      margin: 0 0 0 0;
+      margin: 0 0 5px 0;
     }
 
     & picture {
@@ -82,6 +73,14 @@
         margin: 22px 0 7px 0;
       }
     }
+
+    &:nth-child(50n+3) {
+      & a {
+        & h3 {
+          margin: 22px -14px 7px 0;
+        }
+      }
+    }
   }
 
   .swiper-button-prev,
@@ -109,6 +108,14 @@
       & h3 {
         text-align: center;
         margin: 16px 0 7px 0;
+      }
+    }
+
+    &:nth-child(50n+3) {
+      & a {
+        & h3 {
+          margin: 16px 0 7px 0;
+        }
       }
     }
   }
