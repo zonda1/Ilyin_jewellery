@@ -8,16 +8,16 @@
   &__wrapper {
     max-width: 1170px;
     margin: 0 auto;
-    padding: 120px 0 115px;
+    padding: 120px 0 157px;
 
     @media (max-width: $tablet-max-width) {
       max-width: 678px;
-      padding: 70px 0 65px;
+      padding: 70px 0 98px;
     }
 
     @media (max-width: $mobile-max-width) {
       max-width: 290px;
-      padding: 60px 0 55px;
+      padding: 60px 0 77px;
     }
   }
 
@@ -45,7 +45,6 @@
     }
 
     & a {
-
       border-bottom: 1px solid $brown;
       color: $dark;
 
